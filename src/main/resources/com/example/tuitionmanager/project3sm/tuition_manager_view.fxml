@@ -53,15 +53,15 @@
                               <Label text="Major" GridPane.rowIndex="3" />
                               <Label text="Credits Completed:" GridPane.rowIndex="4" />
                               <Label text="Status" GridPane.rowIndex="5" />
-                              <RadioButton mnemonicParsing="false" selected="true" text="Resident" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <RadioButton fx:id="rb_res" mnemonicParsing="false" selected="true" text="Resident" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                               <TextField prefHeight="26.0" prefWidth="405.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" selected="true" text="BAIT" />
-                                    <RadioButton mnemonicParsing="false" text="CS" />
-                                    <RadioButton mnemonicParsing="false" text="ECE" />
-                                    <RadioButton mnemonicParsing="false" text="ITI" />
-                                    <RadioButton mnemonicParsing="false" text="MATH" />
+                                    <RadioButton fx:id="rb_bait" mnemonicParsing="false" selected="true" text="BAIT" />
+                                    <RadioButton fx:id="rb_cs" mnemonicParsing="false" text="CS" />
+                                    <RadioButton fx:id="rb_ece" mnemonicParsing="false" text="ECE" />
+                                    <RadioButton fx:id="rb_iti" mnemonicParsing="false" text="ITI" />
+                                    <RadioButton fx:id="rb_math" mnemonicParsing="false" text="MATH" />
                                  </children>
                                  <GridPane.margin>
                                     <Insets />
@@ -71,24 +71,24 @@
                               <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <children>
-                                    <RadioButton alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="105.0" text="Non-Resident" />
+                                    <RadioButton fx:id="rb_nonres" alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="105.0" text="Non-Resident" />
                                     <VBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="95.0" spacing="15.0">
                                        <children>
-                                          <RadioButton mnemonicParsing="false" text="Tri-State" />
-                                          <RadioButton mnemonicParsing="false" text="International" />
+                                          <RadioButton fx:id="rb_tristate" mnemonicParsing="false" text="Tri-State" />
+                                          <RadioButton fx:id="rb_intl" mnemonicParsing="false" text="International" />
                                        </children>
                                     </VBox>
                                     <VBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="107.0" spacing="15.0">
                                        <children>
                                           <HBox prefHeight="22.0" prefWidth="175.0" spacing="15.0">
                                              <children>
-                                                <RadioButton mnemonicParsing="false" text="NY" />
-                                                <RadioButton mnemonicParsing="false" text="CT" />
+                                                <RadioButton fx:id="rb_ny" mnemonicParsing="false" text="NY" />
+                                                <RadioButton fx:id="rb_ct" mnemonicParsing="false" text="CT" />
                                              </children>
                                           </HBox>
                                           <HBox prefHeight="22.0" prefWidth="175.0">
                                              <children>
-                                                <CheckBox mnemonicParsing="false" text="Study Abroad" />
+                                                <CheckBox fx:id="cb_studyAbroad" mnemonicParsing="false" text="Study Abroad" />
                                              </children>
                                           </HBox>
                                        </children>
@@ -97,10 +97,10 @@
                               </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Add" />
-                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="Remove" />
-                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Change Major" />
-                                    <Button mnemonicParsing="false" text="Load From File" />
+                                    <Button fx:id="b_add" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Add" />
+                                    <Button fx:id="b_remove" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="Remove" />
+                                    <Button fx:id="b_changemajor" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Change Major" />
+                                    <Button fx:id="b_loadfile" mnemonicParsing="false" text="Load From File" />
                                  </children>
                               </HBox>
                            </children>
@@ -128,8 +128,8 @@
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Enroll" />
-                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Drop" />
+                                    <Button fx:id="b_enroll" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Enroll" />
+                                    <Button fx:id="b_drop" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Drop" />
                                  </children>
                                  <opaqueInsets>
                                     <Insets />
@@ -169,7 +169,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button mnemonicParsing="false" text="Update Scholarship Amount" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Button fx:id="b_uscholar" mnemonicParsing="false" text="Update Scholarship Amount" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                               <TextField GridPane.columnIndex="1" />
                               <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
@@ -195,24 +195,24 @@
                           <menus>
                             <Menu mnemonicParsing="false" text="Roster">
                               <items>
-                                <MenuItem mnemonicParsing="false" text="Print by Profile" />
-                                    <MenuItem mnemonicParsing="false" text="Print by School" />
-                                    <MenuItem mnemonicParsing="false" text="Print by Standing" />
+                                <MenuItem fx:id="mi_profile" mnemonicParsing="false" text="Print by Profile" />
+                                    <MenuItem fx:id="mi_school" mnemonicParsing="false" text="Print by School" />
+                                    <MenuItem fx:id="mi_standing" mnemonicParsing="false" text="Print by Standing" />
                               </items>
                             </Menu>
                             <Menu mnemonicParsing="false" text="School/College">
                               <items>
-                                    <MenuItem mnemonicParsing="false" text="RBS" />
-                                <MenuItem mnemonicParsing="false" text="SAS" />
-                                    <MenuItem mnemonicParsing="false" text="SC&amp;I" />
-                                    <MenuItem mnemonicParsing="false" text="SOE" />
+                                    <MenuItem fx:id="mi_rbs" mnemonicParsing="false" text="RBS" />
+                                <MenuItem fx:id="mi_sas" mnemonicParsing="false" text="SAS" />
+                                    <MenuItem fx:id="mi_sci" mnemonicParsing="false" text="SC&amp;I" />
+                                    <MenuItem fx:id="mi_soe" mnemonicParsing="false" text="SOE" />
                               </items>
                             </Menu>
                             <Menu mnemonicParsing="false" text="Enrollment">
                               <items>
-                                <MenuItem mnemonicParsing="false" text="Print Enrolled Students" />
-                                    <MenuItem mnemonicParsing="false" text="Print Tuition Due" />
-                                    <MenuItem mnemonicParsing="false" text="Semester End" />
+                                <MenuItem fx:id="mi_enrolledstudents" mnemonicParsing="false" text="Print Enrolled Students" />
+                                    <MenuItem fx:id="mi_tuition" mnemonicParsing="false" text="Print Tuition Due" />
+                                    <MenuItem fx:id="mi_semend" mnemonicParsing="false" text="Semester End" />
                               </items>
                             </Menu>
                           </menus>
@@ -230,4 +230,10 @@
    <bottom>
       <TextArea prefHeight="227.0" prefWidth="542.0" BorderPane.alignment="CENTER" />
    </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </BorderPane>
